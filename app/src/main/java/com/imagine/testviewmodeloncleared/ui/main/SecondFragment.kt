@@ -11,7 +11,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SecondFragment :Fragment() {
 
-    private val viewModel: SecondViewModel by viewModel()
+    private lateinit var viewModel: SecondViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +22,6 @@ class SecondFragment :Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProviders.of(this).get(SecondViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(SecondViewModel::class.java)
     }
 }
